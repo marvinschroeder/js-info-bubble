@@ -1713,6 +1713,11 @@ InfoBubble.prototype.figureOutSize_ = function() {
     height = mapHeight - tabHeight;
   }
 
+  if (padding > 0) {
+    width += 2 * padding;
+    height += 2 * padding;
+  }
+
   if (this.tabsContainer_) {
     this.tabHeight_ = tabHeight;
     this.tabsContainer_.style['width'] = this.px(tabWidth);
